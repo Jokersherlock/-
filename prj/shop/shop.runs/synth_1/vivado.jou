@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Dec 12 13:17:43 2023
+# Process ID: 17364
+# Current directory: D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1
+# Command line: vivado.exe -log shop_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shop_top.tcl
+# Log file: D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/shop_top.vds
+# Journal file: D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source shop_top.tcl -notrace

@@ -1,0 +1,1560 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Dec 12 13:19:39 2023
+| Host         : Sherlock running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file shop_top_timing_summary_routed.rpt -pb shop_top_timing_summary_routed.pb -rpx shop_top_timing_summary_routed.rpx -warn_on_violation
+| Design       : shop_top
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (229)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (579)
+5. checking no_input_delay (5)
+6. checking no_output_delay (30)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (229)
+--------------------------
+ There are 229 register/latch pins with no clock driven by root clock pin: u_touch_top/u_i2c_dri/dri_clk_reg/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (579)
+--------------------------------------------------
+ There are 579 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (5)
+------------------------------
+ There are 5 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (30)
+--------------------------------
+ There are 29 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There is 1 port with no output delay but with a timing clock defined on it or propagating through it (LOW)
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      8.647        0.000                      0                 2210        0.116        0.000                      0                 2210        9.500        0.000                       0                   555  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock    Waveform(ns)       Period(ns)      Frequency(MHz)
+-----    ------------       ----------      --------------
+sys_clk  {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk             8.647        0.000                      0                 2210        0.116        0.000                      0                 2210        9.500        0.000                       0                   555  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk
+  To Clock:  sys_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        8.647ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.116ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        9.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             8.647ns  (required time - arrival time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[6]/D
+                            (rising edge-triggered cell FDPE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.076ns  (logic 3.484ns (31.455%)  route 7.592ns (68.545%))
+  Logic Levels:           8  (LUT6=4 MUXF7=3 MUXF8=1)
+  Clock Path Skew:        -0.346ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.762ns = ( 25.762 - 20.000 ) 
+    Source Clock Delay      (SCD):    6.785ns
+    Clock Pessimism Removal (CPR):    0.677ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           2.064     3.493    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.105     3.598 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.220     3.817    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.105     3.922 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.355     4.277    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.105     4.382 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.720     5.103    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     5.188 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.598     6.785    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/clka
+    RAMB36_X2Y27         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y27         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[0])
+                                                      2.125     8.910 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0]
+                         net (fo=1, routed)           1.851    10.761    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[13]_INST_0_i_6_0[0]
+    SLICE_X54Y119        LUT6 (Prop_lut6_I0_O)        0.105    10.866 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[6]_INST_0_i_8/O
+                         net (fo=1, routed)           0.000    10.866    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[6]_INST_0_i_8_n_0
+    SLICE_X54Y119        MUXF7 (Prop_muxf7_I0_O)      0.201    11.067 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[6]_INST_0_i_6/O
+                         net (fo=1, routed)           0.000    11.067    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[6]_INST_0_i_6_n_0
+    SLICE_X54Y119        MUXF8 (Prop_muxf8_I0_O)      0.082    11.149 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[6]_INST_0_i_3/O
+                         net (fo=1, routed)           1.627    12.776    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[6]_INST_0_i_3_n_0
+    SLICE_X66Y92         LUT6 (Prop_lut6_I5_O)        0.259    13.035 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[6]_INST_0/O
+                         net (fo=2, routed)           2.699    15.734    u_show_top/u_lcd_display/u_get_pix_area/pixel_data[23]_i_4_2[6]
+    SLICE_X35Y47         LUT6 (Prop_lut6_I0_O)        0.105    15.839 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data[6]_i_7/O
+                         net (fo=1, routed)           0.000    15.839    u_show_top/u_lcd_display/u_get_pix_area/pixel_data[6]_i_7_n_0
+    SLICE_X35Y47         MUXF7 (Prop_muxf7_I1_O)      0.182    16.021 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data_reg[6]_i_5/O
+                         net (fo=2, routed)           1.416    17.437    u_show_top/u_lcd_display/u_get_pix_area/pixel_data_reg[6]_i_5_n_0
+    SLICE_X34Y46         LUT6 (Prop_lut6_I5_O)        0.252    17.689 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data[6]_i_2/O
+                         net (fo=1, routed)           0.000    17.689    u_show_top/u_lcd_display/u_get_pix_area/pixel_data[6]_i_2_n_0
+    SLICE_X34Y46         MUXF7 (Prop_muxf7_I0_O)      0.173    17.862 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data_reg[6]_i_1/O
+                         net (fo=1, routed)           0.000    17.862    u_show_top/u_lcd_display/u_get_pix_data/p_1_in[6]
+    SLICE_X34Y46         FDPE                                         r  u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.252    25.762    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X34Y46         FDPE                                         r  u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[6]/C
+                         clock pessimism              0.677    26.439    
+                         clock uncertainty           -0.035    26.404    
+    SLICE_X34Y46         FDPE (Setup_fdpe_C_D)        0.104    26.508    u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[6]
+  -------------------------------------------------------------------
+                         required time                         26.508    
+                         arrival time                         -17.862    
+  -------------------------------------------------------------------
+                         slack                                  8.647    
+
+Slack (MET) :             8.800ns  (required time - arrival time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        10.923ns  (logic 3.503ns (32.071%)  route 7.420ns (67.929%))
+  Logic Levels:           8  (LUT6=4 MUXF7=3 MUXF8=1)
+  Clock Path Skew:        -0.346ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.762ns = ( 25.762 - 20.000 ) 
+    Source Clock Delay      (SCD):    6.785ns
+    Clock Pessimism Removal (CPR):    0.677ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           2.064     3.493    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.105     3.598 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.220     3.817    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.105     3.922 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.355     4.277    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.105     4.382 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.720     5.103    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     5.188 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.598     6.785    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/clka
+    RAMB36_X2Y27         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y27         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[3])
+                                                      2.125     8.910 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3]
+                         net (fo=1, routed)           1.869    10.780    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[13]_INST_0_i_6_0[3]
+    SLICE_X55Y123        LUT6 (Prop_lut6_I0_O)        0.105    10.885 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[9]_INST_0_i_8/O
+                         net (fo=1, routed)           0.000    10.885    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[9]_INST_0_i_8_n_0
+    SLICE_X55Y123        MUXF7 (Prop_muxf7_I0_O)      0.199    11.084 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[9]_INST_0_i_6/O
+                         net (fo=1, routed)           0.000    11.084    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[9]_INST_0_i_6_n_0
+    SLICE_X55Y123        MUXF8 (Prop_muxf8_I0_O)      0.085    11.169 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[9]_INST_0_i_3/O
+                         net (fo=1, routed)           1.542    12.711    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[9]_INST_0_i_3_n_0
+    SLICE_X66Y93         LUT6 (Prop_lut6_I5_O)        0.264    12.975 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[9]_INST_0/O
+                         net (fo=2, routed)           2.467    15.442    u_show_top/u_lcd_display/u_get_pix_area/pixel_data[23]_i_4_2[9]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I0_O)        0.105    15.547 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data[9]_i_7/O
+                         net (fo=1, routed)           0.000    15.547    u_show_top/u_lcd_display/u_get_pix_area/pixel_data[9]_i_7_n_0
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.178    15.725 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data_reg[9]_i_5/O
+                         net (fo=2, routed)           1.541    17.266    u_show_top/u_lcd_display/u_get_pix_area/pixel_data_reg[9]_i_5_n_0
+    SLICE_X36Y44         LUT6 (Prop_lut6_I5_O)        0.241    17.507 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data[9]_i_2/O
+                         net (fo=1, routed)           0.000    17.507    u_show_top/u_lcd_display/u_get_pix_area/pixel_data[9]_i_2_n_0
+    SLICE_X36Y44         MUXF7 (Prop_muxf7_I0_O)      0.201    17.708 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data_reg[9]_i_1/O
+                         net (fo=1, routed)           0.000    17.708    u_show_top/u_lcd_display/u_get_pix_data/p_1_in[9]
+    SLICE_X36Y44         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.252    25.762    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X36Y44         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[9]/C
+                         clock pessimism              0.677    26.439    
+                         clock uncertainty           -0.035    26.404    
+    SLICE_X36Y44         FDCE (Setup_fdce_C_D)        0.104    26.508    u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[9]
+  -------------------------------------------------------------------
+                         required time                         26.508    
+                         arrival time                         -17.708    
+  -------------------------------------------------------------------
+                         slack                                  8.800    
+
+Slack (MET) :             8.920ns  (required time - arrival time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[8]/D
+                            (rising edge-triggered cell FDPE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        10.729ns  (logic 3.317ns (30.916%)  route 7.412ns (69.084%))
+  Logic Levels:           7  (LUT5=1 LUT6=3 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.346ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.762ns = ( 25.762 - 20.000 ) 
+    Source Clock Delay      (SCD):    6.785ns
+    Clock Pessimism Removal (CPR):    0.677ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           2.064     3.493    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.105     3.598 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.220     3.817    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.105     3.922 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.355     4.277    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.105     4.382 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.720     5.103    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     5.188 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.598     6.785    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/clka
+    RAMB36_X2Y27         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y27         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[2])
+                                                      2.125     8.910 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2]
+                         net (fo=1, routed)           1.960    10.870    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[13]_INST_0_i_6_0[2]
+    SLICE_X55Y120        LUT6 (Prop_lut6_I0_O)        0.105    10.975 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[8]_INST_0_i_8/O
+                         net (fo=1, routed)           0.000    10.975    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[8]_INST_0_i_8_n_0
+    SLICE_X55Y120        MUXF7 (Prop_muxf7_I0_O)      0.199    11.174 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[8]_INST_0_i_6/O
+                         net (fo=1, routed)           0.000    11.174    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[8]_INST_0_i_6_n_0
+    SLICE_X55Y120        MUXF8 (Prop_muxf8_I0_O)      0.085    11.259 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[8]_INST_0_i_3/O
+                         net (fo=1, routed)           1.636    12.896    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[8]_INST_0_i_3_n_0
+    SLICE_X66Y91         LUT6 (Prop_lut6_I5_O)        0.264    13.160 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[8]_INST_0/O
+                         net (fo=2, routed)           2.276    15.436    u_show_top/u_lcd_display/u_get_pix_area/pixel_data[23]_i_4_2[8]
+    SLICE_X39Y46         LUT6 (Prop_lut6_I0_O)        0.105    15.541 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data[8]_i_7/O
+                         net (fo=1, routed)           0.000    15.541    u_show_top/u_lcd_display/u_get_pix_area/pixel_data[8]_i_7_n_0
+    SLICE_X39Y46         MUXF7 (Prop_muxf7_I1_O)      0.182    15.723 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data_reg[8]_i_4/O
+                         net (fo=1, routed)           1.539    17.262    u_show_top/u_lcd_display/u_get_pix_area/pixel_data_reg[8]_i_4_n_0
+    SLICE_X37Y46         LUT5 (Prop_lut5_I4_O)        0.252    17.514 r  u_show_top/u_lcd_display/u_get_pix_area/pixel_data[8]_i_1/O
+                         net (fo=1, routed)           0.000    17.514    u_show_top/u_lcd_display/u_get_pix_data/p_1_in[8]
+    SLICE_X37Y46         FDPE                                         r  u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.252    25.762    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X37Y46         FDPE                                         r  u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[8]/C
+                         clock pessimism              0.677    26.439    
+                         clock uncertainty           -0.035    26.404    
+    SLICE_X37Y46         FDPE (Setup_fdpe_C_D)        0.030    26.434    u_show_top/u_lcd_display/u_get_pix_data/pixel_data_reg[8]
+  -------------------------------------------------------------------
+                         required time                         26.434    
+                         arrival time                         -17.514    
+  -------------------------------------------------------------------
+                         slack                                  8.920    
+
+Slack (MET) :             8.928ns  (required time - arrival time)
+  Source:                 u_show_top/u_rd_id/lcd_id_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_driver/data_req_reg/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        12.115ns  (logic 2.660ns (21.956%)  route 9.455ns (78.044%))
+  Logic Levels:           9  (CARRY4=2 LUT2=2 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        1.048ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.748ns = ( 25.748 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.765ns
+    Clock Pessimism Removal (CPR):    0.066ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.873     3.302    sys_clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.387 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=53, routed)          1.378     4.765    u_show_top/u_rd_id/sys_clk_IBUF_BUFG
+    SLICE_X50Y53         FDCE                                         r  u_show_top/u_rd_id/lcd_id_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y53         FDCE (Prop_fdce_C_Q)         0.433     5.198 r  u_show_top/u_rd_id/lcd_id_reg[3]/Q
+                         net (fo=5, routed)           1.588     6.786    u_show_top/u_rd_id/lcd_id_reg_n_0_[3]
+    SLICE_X50Y52         LUT2 (Prop_lut2_I0_O)        0.105     6.891 r  u_show_top/u_rd_id/h_cnt1_carry_i_11/O
+                         net (fo=1, routed)           0.775     7.666    u_show_top/u_rd_id/h_cnt1_carry_i_11_n_0
+    SLICE_X50Y52         LUT6 (Prop_lut6_I3_O)        0.105     7.771 f  u_show_top/u_rd_id/h_cnt1_carry_i_9/O
+                         net (fo=1, routed)           1.301     9.072    u_show_top/u_rd_id/h_cnt1_carry_i_9_n_0
+    SLICE_X46Y53         LUT5 (Prop_lut5_I0_O)        0.105     9.177 r  u_show_top/u_rd_id/h_cnt1_carry_i_6/O
+                         net (fo=47, routed)          1.168    10.345    u_show_top/u_rd_id/lcd_id_reg[1]_5[1]
+    SLICE_X46Y52         LUT2 (Prop_lut2_I0_O)        0.125    10.470 r  u_show_top/u_rd_id/data_req5_carry_i_1/O
+                         net (fo=1, routed)           0.562    11.032    u_show_top/u_lcd_driver/data_req4_carry_0[0]
+    SLICE_X46Y53         CARRY4 (Prop_carry4_DI[1]_CO[2])
+                                                      0.599    11.631 f  u_show_top/u_lcd_driver/data_req5_carry/CO[2]
+                         net (fo=6, routed)           1.553    13.184    u_show_top/u_lcd_driver/data_req5_carry_n_1
+    SLICE_X45Y54         LUT5 (Prop_lut5_I3_O)        0.262    13.446 r  u_show_top/u_lcd_driver/i__carry_i_9/O
+                         net (fo=6, routed)           0.470    13.915    u_show_top/u_lcd_driver/h_cnt1_carry_i_5
+    SLICE_X45Y55         LUT6 (Prop_lut6_I4_O)        0.267    14.182 r  u_show_top/u_lcd_driver/i__carry__0_i_2/O
+                         net (fo=1, routed)           0.784    14.966    u_show_top/u_lcd_driver/i__carry__0_i_2_n_0
+    SLICE_X44Y55         CARRY4 (Prop_carry4_DI[0]_CO[1])
+                                                      0.384    15.350 r  u_show_top/u_lcd_driver/data_req3_inferred__0/i__carry__0/CO[1]
+                         net (fo=1, routed)           1.255    16.606    u_show_top/u_lcd_driver/data_req31_in
+    SLICE_X41Y53         LUT4 (Prop_lut4_I3_O)        0.275    16.881 r  u_show_top/u_lcd_driver/data_req_i_1/O
+                         net (fo=1, routed)           0.000    16.881    u_show_top/u_lcd_driver/data_req0
+    SLICE_X41Y53         FDCE                                         r  u_show_top/u_lcd_driver/data_req_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.237    25.748    u_show_top/u_lcd_driver/lcd_clk_OBUF_BUFG
+    SLICE_X41Y53         FDCE                                         r  u_show_top/u_lcd_driver/data_req_reg/C
+                         clock pessimism              0.066    25.814    
+                         clock uncertainty           -0.035    25.778    
+    SLICE_X41Y53         FDCE (Setup_fdce_C_D)        0.030    25.808    u_show_top/u_lcd_driver/data_req_reg
+  -------------------------------------------------------------------
+                         required time                         25.808    
+                         arrival time                         -16.881    
+  -------------------------------------------------------------------
+                         slack                                  8.928    
+
+Slack (MET) :             9.093ns  (required time - arrival time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        10.554ns  (logic 0.484ns (4.586%)  route 10.070ns (95.414%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.069ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.986ns = ( 25.986 - 20.000 ) 
+    Source Clock Delay      (SCD):    6.595ns
+    Clock Pessimism Removal (CPR):    0.677ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           2.064     3.493    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.105     3.598 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.220     3.817    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.105     3.922 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.355     4.277    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.105     4.382 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.720     5.103    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     5.188 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.407     6.595    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/clka
+    SLICE_X37Y45         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y45         FDCE (Prop_fdce_C_Q)         0.379     6.974 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/Q
+                         net (fo=65, routed)          8.514    15.487    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/pwropt
+    SLICE_X42Y98         LUT4 (Prop_lut4_I2_O)        0.105    15.592 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_gate_107/O
+                         net (fo=1, routed)           1.556    17.148    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_sig_64
+    RAMB36_X3Y27         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.476    25.986    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/clka
+    RAMB36_X3Y27         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.677    26.663    
+                         clock uncertainty           -0.035    26.628    
+    RAMB36_X3Y27         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.387    26.241    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         26.241    
+                         arrival time                         -17.148    
+  -------------------------------------------------------------------
+                         slack                                  9.093    
+
+Slack (MET) :             9.286ns  (required time - arrival time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        10.313ns  (logic 0.484ns (4.693%)  route 9.829ns (95.307%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.939ns = ( 25.939 - 20.000 ) 
+    Source Clock Delay      (SCD):    6.595ns
+    Clock Pessimism Removal (CPR):    0.677ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           2.064     3.493    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.105     3.598 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.220     3.817    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.105     3.922 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.355     4.277    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.105     4.382 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.720     5.103    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     5.188 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.407     6.595    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/clka
+    SLICE_X37Y45         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y45         FDCE (Prop_fdce_C_Q)         0.379     6.974 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/Q
+                         net (fo=65, routed)          8.481    15.455    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/pwropt
+    SLICE_X36Y92         LUT4 (Prop_lut4_I2_O)        0.105    15.560 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_gate_67/O
+                         net (fo=1, routed)           1.348    16.908    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_sig_40
+    RAMB36_X2Y27         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.429    25.939    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/clka
+    RAMB36_X2Y27         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.677    26.616    
+                         clock uncertainty           -0.035    26.581    
+    RAMB36_X2Y27         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.387    26.194    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         26.194    
+                         arrival time                         -16.908    
+  -------------------------------------------------------------------
+                         slack                                  9.286    
+
+Slack (MET) :             9.367ns  (required time - arrival time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        10.330ns  (logic 0.484ns (4.685%)  route 9.846ns (95.315%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.120ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.037ns = ( 26.037 - 20.000 ) 
+    Source Clock Delay      (SCD):    6.595ns
+    Clock Pessimism Removal (CPR):    0.677ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           2.064     3.493    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.105     3.598 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.220     3.817    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.105     3.922 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.355     4.277    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.105     4.382 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.720     5.103    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     5.188 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.407     6.595    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/clka
+    SLICE_X37Y45         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y45         FDCE (Prop_fdce_C_Q)         0.379     6.974 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/Q
+                         net (fo=65, routed)          7.797    14.770    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/pwropt
+    SLICE_X49Y93         LUT4 (Prop_lut4_I2_O)        0.105    14.875 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_gate_122/O
+                         net (fo=1, routed)           2.050    16.925    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_sig_73
+    RAMB36_X4Y24         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.527    26.037    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/clka
+    RAMB36_X4Y24         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.677    26.714    
+                         clock uncertainty           -0.035    26.679    
+    RAMB36_X4Y24         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.387    26.292    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         26.292    
+                         arrival time                         -16.925    
+  -------------------------------------------------------------------
+                         slack                                  9.367    
+
+Slack (MET) :             9.424ns  (required time - arrival time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        10.166ns  (logic 0.484ns (4.761%)  route 9.682ns (95.239%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.930ns = ( 25.930 - 20.000 ) 
+    Source Clock Delay      (SCD):    6.595ns
+    Clock Pessimism Removal (CPR):    0.677ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           2.064     3.493    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.105     3.598 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.220     3.817    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.105     3.922 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.355     4.277    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.105     4.382 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.720     5.103    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     5.188 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.407     6.595    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/clka
+    SLICE_X37Y45         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y45         FDCE (Prop_fdce_C_Q)         0.379     6.974 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/Q
+                         net (fo=65, routed)          8.625    15.598    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/pwropt
+    SLICE_X35Y99         LUT4 (Prop_lut4_I2_O)        0.105    15.703 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_gate_102/O
+                         net (fo=1, routed)           1.057    16.761    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_sig_61
+    RAMB36_X2Y25         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.420    25.930    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/clka
+    RAMB36_X2Y25         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.677    26.607    
+                         clock uncertainty           -0.035    26.572    
+    RAMB36_X2Y25         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.387    26.185    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         26.185    
+                         arrival time                         -16.761    
+  -------------------------------------------------------------------
+                         slack                                  9.424    
+
+Slack (MET) :             9.539ns  (required time - arrival time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        10.102ns  (logic 0.484ns (4.791%)  route 9.618ns (95.209%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.981ns = ( 25.981 - 20.000 ) 
+    Source Clock Delay      (SCD):    6.595ns
+    Clock Pessimism Removal (CPR):    0.677ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           2.064     3.493    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.105     3.598 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.220     3.817    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.105     3.922 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.355     4.277    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.105     4.382 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.720     5.103    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     5.188 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.407     6.595    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/clka
+    SLICE_X37Y45         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y45         FDCE (Prop_fdce_C_Q)         0.379     6.974 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/Q
+                         net (fo=65, routed)          8.219    15.193    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/pwropt
+    SLICE_X39Y93         LUT4 (Prop_lut4_I2_O)        0.105    15.298 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_gate_87/O
+                         net (fo=1, routed)           1.398    16.697    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_sig_52
+    RAMB36_X3Y23         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.471    25.981    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/clka
+    RAMB36_X3Y23         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.677    26.658    
+                         clock uncertainty           -0.035    26.623    
+    RAMB36_X3Y23         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.387    26.236    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         26.236    
+                         arrival time                         -16.697    
+  -------------------------------------------------------------------
+                         slack                                  9.539    
+
+Slack (MET) :             9.582ns  (required time - arrival time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[54].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        9.861ns  (logic 0.497ns (5.040%)  route 9.364ns (94.960%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.941ns = ( 25.941 - 20.000 ) 
+    Source Clock Delay      (SCD):    6.595ns
+    Clock Pessimism Removal (CPR):    0.677ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           2.064     3.493    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.105     3.598 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.220     3.817    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.105     3.922 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.355     4.277    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.105     4.382 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.720     5.103    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     5.188 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.407     6.595    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/clka
+    SLICE_X37Y45         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y45         FDCE (Prop_fdce_C_Q)         0.379     6.974 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_1_cooolDelFlop/Q
+                         net (fo=65, routed)          8.514    15.487    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[54].ram.r/prim_init.ram/pwropt
+    SLICE_X42Y98         LUT4 (Prop_lut4_I2_O)        0.118    15.605 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[54].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_gate_109/O
+                         net (fo=1, routed)           0.850    16.455    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[54].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ENARDEN_cooolgate_en_sig_65
+    RAMB36_X2Y21         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[54].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    U18                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         1.363    21.363 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.716    23.079    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.084    23.163 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.181    23.343    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.084    23.427 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.297    23.724    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.084    23.808 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.625    24.434    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    24.511 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.431    25.941    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[54].ram.r/prim_init.ram/clka
+    RAMB36_X2Y21         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[54].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.677    26.618    
+                         clock uncertainty           -0.035    26.583    
+    RAMB36_X2Y21         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.546    26.037    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[54].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         26.037    
+                         arrival time                         -16.455    
+  -------------------------------------------------------------------
+                         slack                                  9.582    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.116ns  (arrival time - required time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/money_rom_addr_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_3/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[11]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.577ns  (logic 0.164ns (28.417%)  route 0.413ns (71.583%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.278ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.361ns
+    Source Clock Delay      (SCD):    2.585ns
+    Clock Pessimism Removal (CPR):    0.498ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.025     1.291    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.045     1.336 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.088     1.423    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.045     1.468 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.167     1.635    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.045     1.680 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.291     1.971    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.997 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.588     2.585    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X30Y45         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/money_rom_addr_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y45         FDCE (Prop_fdce_C_Q)         0.164     2.749 r  u_show_top/u_lcd_display/u_get_pix_data/money_rom_addr_reg[8]/Q
+                         net (fo=9, routed)           0.413     3.162    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_3/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]
+    RAMB36_X2Y10         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_3/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.210     1.664    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.056     1.720 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.107     1.826    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.056     1.882 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.197     2.079    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.056     2.135 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.331     2.466    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     2.495 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.866     3.361    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_3/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X2Y10         RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_3/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.498     2.863    
+    RAMB36_X2Y10         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[11])
+                                                      0.183     3.046    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_3/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -3.046    
+                         arrival time                           3.162    
+  -------------------------------------------------------------------
+                         slack                                  0.116    
+
+Slack (MET) :             0.121ns  (arrival time - required time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_cooolgate_en_gate_267_cooolDelFlop/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.490ns  (logic 0.186ns (37.969%)  route 0.304ns (62.031%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.278ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.352ns
+    Source Clock Delay      (SCD):    2.576ns
+    Clock Pessimism Removal (CPR):    0.498ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.025     1.291    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.045     1.336 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.088     1.423    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.045     1.468 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.167     1.635    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.045     1.680 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.291     1.971    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.997 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.579     2.576    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X31Y51         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y51         FDCE (Prop_fdce_C_Q)         0.141     2.717 r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[12]/Q
+                         net (fo=11, routed)          0.304     3.021    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/addra[2]
+    SLICE_X31Y47         LUT3 (Prop_lut3_I1_O)        0.045     3.066 r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT_inferred__5/i_/O
+                         net (fo=1, routed)           0.000     3.066    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/ena_array[0]
+    SLICE_X31Y47         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_cooolgate_en_gate_267_cooolDelFlop/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.210     1.664    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.056     1.720 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.107     1.826    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.056     1.882 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.197     2.079    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.056     2.135 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.331     2.466    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     2.495 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.857     3.352    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/clka
+    SLICE_X31Y47         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_cooolgate_en_gate_267_cooolDelFlop/C
+                         clock pessimism             -0.498     2.854    
+    SLICE_X31Y47         FDCE (Hold_fdce_C_D)         0.091     2.945    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_cooolgate_en_gate_267_cooolDelFlop
+  -------------------------------------------------------------------
+                         required time                         -2.945    
+                         arrival time                           3.066    
+  -------------------------------------------------------------------
+                         slack                                  0.121    
+
+Slack (MET) :             0.122ns  (arrival time - required time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/goods_rom_addr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.628ns  (logic 0.141ns (22.445%)  route 0.487ns (77.555%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.323ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.382ns
+    Source Clock Delay      (SCD):    2.556ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.025     1.291    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.045     1.336 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.088     1.423    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.045     1.468 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.167     1.635    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.045     1.680 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.291     1.971    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.997 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.559     2.556    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X39Y40         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/goods_rom_addr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y40         FDCE (Prop_fdce_C_Q)         0.141     2.697 r  u_show_top/u_lcd_display/u_get_pix_data/goods_rom_addr_reg[0]/Q
+                         net (fo=78, routed)          0.487     3.184    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/addra[0]
+    RAMB36_X3Y8          RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.210     1.664    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.056     1.720 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.107     1.826    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.056     1.882 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.197     2.079    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.056     2.135 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.331     2.466    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     2.495 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.887     3.382    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/clka
+    RAMB36_X3Y8          RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.503     2.879    
+    RAMB36_X3Y8          RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[0])
+                                                      0.183     3.062    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -3.062    
+                         arrival time                           3.184    
+  -------------------------------------------------------------------
+                         slack                                  0.122    
+
+Slack (MET) :             0.159ns  (arrival time - required time)
+  Source:                 u_touch_top/u_i2c_dri/clk_cnt_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_touch_top/u_i2c_dri/clk_cnt_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.264ns  (logic 0.186ns (70.573%)  route 0.078ns (29.427%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.035ns
+    Source Clock Delay      (SCD):    1.519ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           0.674     0.940    sys_clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.966 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=53, routed)          0.553     1.519    u_touch_top/u_i2c_dri/sys_clk_IBUF_BUFG
+    SLICE_X53Y50         FDCE                                         r  u_touch_top/u_i2c_dri/clk_cnt_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y50         FDCE (Prop_fdce_C_Q)         0.141     1.660 r  u_touch_top/u_i2c_dri/clk_cnt_reg[8]/Q
+                         net (fo=3, routed)           0.078     1.737    u_touch_top/u_i2c_dri/clk_cnt[8]
+    SLICE_X52Y50         LUT5 (Prop_lut5_I0_O)        0.045     1.782 r  u_touch_top/u_i2c_dri/clk_cnt[9]_i_1/O
+                         net (fo=1, routed)           0.000     1.782    u_touch_top/u_i2c_dri/clk_cnt_3[9]
+    SLICE_X52Y50         FDCE                                         r  u_touch_top/u_i2c_dri/clk_cnt_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           0.731     1.185    sys_clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.214 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=53, routed)          0.821     2.035    u_touch_top/u_i2c_dri/sys_clk_IBUF_BUFG
+    SLICE_X52Y50         FDCE                                         r  u_touch_top/u_i2c_dri/clk_cnt_reg[9]/C
+                         clock pessimism             -0.503     1.532    
+    SLICE_X52Y50         FDCE (Hold_fdce_C_D)         0.092     1.624    u_touch_top/u_i2c_dri/clk_cnt_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -1.624    
+                         arrival time                           1.782    
+  -------------------------------------------------------------------
+                         slack                                  0.159    
+
+Slack (MET) :             0.176ns  (arrival time - required time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/option_rom_addr_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.430ns  (logic 0.141ns (32.762%)  route 0.289ns (67.238%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.072ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.355ns
+    Source Clock Delay      (SCD):    2.552ns
+    Clock Pessimism Removal (CPR):    0.731ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.025     1.291    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.045     1.336 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.088     1.423    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.045     1.468 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.167     1.635    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.045     1.680 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.291     1.971    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.997 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.555     2.552    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X40Y33         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/option_rom_addr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y33         FDCE (Prop_fdce_C_Q)         0.141     2.693 r  u_show_top/u_lcd_display/u_get_pix_data/option_rom_addr_reg[11]/Q
+                         net (fo=43, routed)          0.289     2.982    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_init.ram/addra[11]
+    RAMB36_X2Y6          RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.210     1.664    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.056     1.720 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.107     1.826    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.056     1.882 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.197     2.079    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.056     2.135 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.331     2.466    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     2.495 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.860     3.355    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_init.ram/clka
+    RAMB36_X2Y6          RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.731     2.624    
+    RAMB36_X2Y6          RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[14])
+                                                      0.183     2.807    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.807    
+                         arrival time                           2.982    
+  -------------------------------------------------------------------
+                         slack                                  0.176    
+
+Slack (MET) :             0.184ns  (arrival time - required time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[11]
+                            (rising edge-triggered cell RAMB18E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.689ns  (logic 0.141ns (20.463%)  route 0.548ns (79.537%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.322ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.396ns
+    Source Clock Delay      (SCD):    2.576ns
+    Clock Pessimism Removal (CPR):    0.498ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.025     1.291    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.045     1.336 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.088     1.423    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.045     1.468 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.167     1.635    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.045     1.680 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.291     1.971    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.997 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.579     2.576    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X31Y50         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y50         FDCE (Prop_fdce_C_Q)         0.141     2.717 r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[8]/Q
+                         net (fo=8, routed)           0.548     3.265    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/addra[8]
+    RAMB18_X1Y18         RAMB18E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.210     1.664    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.056     1.720 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.107     1.826    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.056     1.882 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.197     2.079    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.056     2.135 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.331     2.466    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     2.495 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.901     3.396    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/clka
+    RAMB18_X1Y18         RAMB18E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                         clock pessimism             -0.498     2.898    
+    RAMB18_X1Y18         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[11])
+                                                      0.183     3.081    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram
+  -------------------------------------------------------------------
+                         required time                         -3.081    
+                         arrival time                           3.265    
+  -------------------------------------------------------------------
+                         slack                                  0.184    
+
+Slack (MET) :             0.186ns  (arrival time - required time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[4]
+                            (rising edge-triggered cell RAMB18E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.414ns  (logic 0.141ns (34.038%)  route 0.273ns (65.962%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.046ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.363ns
+    Source Clock Delay      (SCD):    2.586ns
+    Clock Pessimism Removal (CPR):    0.731ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.025     1.291    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.045     1.336 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.088     1.423    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.045     1.468 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.167     1.635    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.045     1.680 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.291     1.971    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.997 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.589     2.586    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X31Y48         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y48         FDCE (Prop_fdce_C_Q)         0.141     2.727 r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[0]/Q
+                         net (fo=8, routed)           0.273     3.000    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/addra[0]
+    RAMB18_X2Y19         RAMB18E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[4]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.210     1.664    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.056     1.720 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.107     1.826    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.056     1.882 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.197     2.079    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.056     2.135 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.331     2.466    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     2.495 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.868     3.363    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/clka
+    RAMB18_X2Y19         RAMB18E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                         clock pessimism             -0.731     2.632    
+    RAMB18_X2Y19         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[4])
+                                                      0.183     2.815    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram
+  -------------------------------------------------------------------
+                         required time                         -2.815    
+                         arrival time                           3.000    
+  -------------------------------------------------------------------
+                         slack                                  0.186    
+
+Slack (MET) :             0.187ns  (arrival time - required time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.550ns  (logic 0.355ns (64.532%)  route 0.195ns (35.468%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        0.258ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.342ns
+    Source Clock Delay      (SCD):    2.586ns
+    Clock Pessimism Removal (CPR):    0.498ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.025     1.291    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.045     1.336 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.088     1.423    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.045     1.468 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.167     1.635    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.045     1.680 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.291     1.971    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.997 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.589     2.586    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X31Y49         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y49         FDCE (Prop_fdce_C_Q)         0.141     2.727 r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[7]/Q
+                         net (fo=8, routed)           0.194     2.921    u_show_top/u_lcd_driver/price_rom_addr_reg[12]_0[6]
+    SLICE_X31Y49         LUT2 (Prop_lut2_I1_O)        0.045     2.966 r  u_show_top/u_lcd_driver/price_rom_addr[4]_i_2/O
+                         net (fo=1, routed)           0.000     2.966    u_show_top/u_lcd_driver/price_rom_addr[4]_i_2_n_0
+    SLICE_X31Y49         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.115     3.081 r  u_show_top/u_lcd_driver/price_rom_addr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     3.082    u_show_top/u_lcd_driver/price_rom_addr_reg[4]_i_1_n_0
+    SLICE_X31Y50         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     3.136 r  u_show_top/u_lcd_driver/price_rom_addr_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     3.136    u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[11]_0[0]
+    SLICE_X31Y50         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.210     1.664    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.056     1.720 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.107     1.826    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.056     1.882 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.197     2.079    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.056     2.135 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.331     2.466    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     2.495 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.847     3.342    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X31Y50         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[8]/C
+                         clock pessimism             -0.498     2.844    
+    SLICE_X31Y50         FDCE (Hold_fdce_C_D)         0.105     2.949    u_show_top/u_lcd_display/u_get_pix_data/price_rom_addr_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -2.949    
+                         arrival time                           3.136    
+  -------------------------------------------------------------------
+                         slack                                  0.187    
+
+Slack (MET) :             0.189ns  (arrival time - required time)
+  Source:                 u_touch_top/u_i2c_dri/clk_cnt_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_touch_top/u_i2c_dri/clk_cnt_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.293ns  (logic 0.186ns (63.499%)  route 0.107ns (36.501%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.035ns
+    Source Clock Delay      (SCD):    1.519ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           0.674     0.940    sys_clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.966 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=53, routed)          0.553     1.519    u_touch_top/u_i2c_dri/sys_clk_IBUF_BUFG
+    SLICE_X52Y50         FDCE                                         r  u_touch_top/u_i2c_dri/clk_cnt_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y50         FDCE (Prop_fdce_C_Q)         0.141     1.660 r  u_touch_top/u_i2c_dri/clk_cnt_reg[2]/Q
+                         net (fo=6, routed)           0.107     1.767    u_touch_top/u_i2c_dri/clk_cnt[2]
+    SLICE_X53Y50         LUT4 (Prop_lut4_I0_O)        0.045     1.812 r  u_touch_top/u_i2c_dri/clk_cnt[3]_i_1/O
+                         net (fo=1, routed)           0.000     1.812    u_touch_top/u_i2c_dri/clk_cnt_3[3]
+    SLICE_X53Y50         FDCE                                         r  u_touch_top/u_i2c_dri/clk_cnt_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           0.731     1.185    sys_clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.214 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=53, routed)          0.821     2.035    u_touch_top/u_i2c_dri/sys_clk_IBUF_BUFG
+    SLICE_X53Y50         FDCE                                         r  u_touch_top/u_i2c_dri/clk_cnt_reg[3]/C
+                         clock pessimism             -0.503     1.532    
+    SLICE_X53Y50         FDCE (Hold_fdce_C_D)         0.091     1.623    u_touch_top/u_i2c_dri/clk_cnt_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.623    
+                         arrival time                           1.812    
+  -------------------------------------------------------------------
+                         slack                                  0.189    
+
+Slack (MET) :             0.192ns  (arrival time - required time)
+  Source:                 u_show_top/u_lcd_display/u_get_pix_data/goods_rom_addr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[1]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.699ns  (logic 0.141ns (20.170%)  route 0.558ns (79.829%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.324ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.383ns
+    Source Clock Delay      (SCD):    2.556ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.025     1.291    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.045     1.336 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.088     1.423    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.045     1.468 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.167     1.635    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.045     1.680 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.291     1.971    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.997 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.559     2.556    u_show_top/u_lcd_display/u_get_pix_data/lcd_clk_OBUF_BUFG
+    SLICE_X39Y40         FDCE                                         r  u_show_top/u_lcd_display/u_get_pix_data/goods_rom_addr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y40         FDCE (Prop_fdce_C_Q)         0.141     2.697 r  u_show_top/u_lcd_display/u_get_pix_data/goods_rom_addr_reg[0]/Q
+                         net (fo=78, routed)          0.558     3.255    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/addra[0]
+    RAMB36_X3Y9          RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[1]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    U18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  sys_clk_IBUF_inst/O
+                         net (fo=2, routed)           1.210     1.664    u_show_top/u_rd_id/sys_clk_IBUF
+    SLICE_X50Y51         LUT5 (Prop_lut5_I3_O)        0.056     1.720 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7/O
+                         net (fo=1, routed)           0.107     1.826    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_7_n_0
+    SLICE_X50Y51         LUT6 (Prop_lut6_I1_O)        0.056     1.882 f  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4/O
+                         net (fo=1, routed)           0.197     2.079    u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_4_n_0
+    SLICE_X50Y48         LUT6 (Prop_lut6_I5_O)        0.056     2.135 r  u_show_top/u_rd_id/lcd_clk_OBUF_BUFG_inst_i_1/O
+                         net (fo=1, routed)           0.331     2.466    lcd_clk_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     2.495 r  lcd_clk_OBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.888     3.383    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/clka
+    RAMB36_X3Y9          RAMB36E1                                     r  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.503     2.880    
+    RAMB36_X3Y9          RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[1])
+                                                      0.183     3.063    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -3.063    
+                         arrival time                           3.255    
+  -------------------------------------------------------------------
+                         slack                                  0.192    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { sys_clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X3Y10   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X5Y3    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X3Y11   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X3Y6    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X5Y4    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X3Y7    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X4Y5    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X4Y6    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X3Y28   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.389         20.000      17.611     RAMB36_X3Y29   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X32Y24   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_246_cooolDelFlop/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X50Y51   u_show_top/u_clk_div/clk_12_5m_reg/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X51Y51   u_show_top/u_clk_div/clk_25m_reg/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X50Y51   u_show_top/u_clk_div/div_4_cnt_reg/C
+Low Pulse Width   Slow    FDPE/C              n/a            0.500         10.000      9.500      SLICE_X80Y67   u_show_top/u_lcd_driver/lcd_de_reg_lopt_replica_17/C
+Low Pulse Width   Slow    FDPE/C              n/a            0.500         10.000      9.500      SLICE_X80Y64   u_show_top/u_lcd_driver/lcd_de_reg_lopt_replica_7/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X63Y92   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_61_cooolDelFlop/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X30Y15   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X30Y15   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X54Y16   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X48Y94   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_76_cooolDelFlop/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X54Y97   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_116_cooolDelFlop/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X106Y81  u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_151_cooolDelFlop/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X90Y79   u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[41].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[41].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_181_cooolDelFlop/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X43Y9    u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_init.ram/u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_cooolgate_en_gate_206_cooolDelFlop/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X32Y50   u_show_top/u_lcd_display/u_get_pix_area/pix_area_reg[0]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X34Y48   u_show_top/u_lcd_display/u_get_pix_area/pix_area_reg[1]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X34Y49   u_show_top/u_lcd_display/u_get_pix_area/pix_area_reg[2]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X35Y48   u_show_top/u_lcd_display/u_get_pix_area/pix_area_reg[3]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X35Y47   u_show_top/u_lcd_display/u_get_pix_area/pix_area_reg[4]/C
+
+
+

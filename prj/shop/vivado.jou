@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Dec 15 22:17:28 2023
+# Process ID: 28080
+# Current directory: D:/study/FPGA/study_project/shop/prj/shop
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6332 D:\study\FPGA\study_project\shop\prj\shop\shop.xpr
+# Log file: D:/study/FPGA/study_project/shop/prj/shop/vivado.log
+# Journal file: D:/study/FPGA/study_project/shop/prj/shop\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/study/FPGA/study_project/shop/prj/shop/shop.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/study/FPGA/study_project/shop/prj/shop/shop.runs/impl_1/shop_top.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/study/FPGA/study_project/shop/prj/shop/shop.runs/impl_1/shop_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager

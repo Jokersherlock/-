@@ -1,0 +1,657 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Dec 12 13:17:43 2023
+# Process ID: 17364
+# Current directory: D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1
+# Command line: vivado.exe -log shop_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shop_top.tcl
+# Log file: D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/shop_top.vds
+# Journal file: D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source shop_top.tcl -notrace
+Command: synth_design -top shop_top -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7820
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1160.922 ; gain = 18.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'shop_top' [D:/study/FPGA/study_project/shop/rtl/shop_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'touch_top' [D:/study/FPGA/study_project/shop/rtl/touch/touch_top.v:1]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter I2C_FREQ bound to: 250000 - type: integer 
+	Parameter REG_NUM_WID bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'i2c_dri' [D:/study/FPGA/study_project/shop/rtl/touch/i2c_dri.v:1]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter I2C_FREQ bound to: 250000 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter st_idle bound to: 8'b00000001 
+	Parameter st_sladdr bound to: 8'b00000010 
+	Parameter st_addr16 bound to: 8'b00000100 
+	Parameter st_addr8 bound to: 8'b00001000 
+	Parameter st_data_wr bound to: 8'b00010000 
+	Parameter st_addr_rd bound to: 8'b00100000 
+	Parameter st_data_rd bound to: 8'b01000000 
+	Parameter st_stop bound to: 8'b10000000 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/study/FPGA/study_project/shop/rtl/touch/i2c_dri.v:210]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_dri' (1#1) [D:/study/FPGA/study_project/shop/rtl/touch/i2c_dri.v:1]
+INFO: [Synth 8-6157] synthesizing module 'touch_dri' [D:/study/FPGA/study_project/shop/rtl/touch/touch_dri.v:1]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter FT_SLAVE_ADDR bound to: 7'b0111000 
+	Parameter FT_BIT_CTRL bound to: 1'b0 
+	Parameter FT_ID_LIB_VERSION bound to: 8'b10100001 
+	Parameter FT_DEVIDE_MODE bound to: 8'b00000000 
+	Parameter FT_ID_MODE bound to: 8'b10100100 
+	Parameter FT_ID_THGROUP bound to: 8'b10000000 
+	Parameter FT_ID_PERIOD_ACT bound to: 8'b10001000 
+	Parameter FT_STATE_REG bound to: 8'b00000010 
+	Parameter FT_TP1_REG bound to: 8'b00000011 
+	Parameter GT_SLAVE_ADDR bound to: 7'b0010100 
+	Parameter GT_BIT_CTRL bound to: 1'b1 
+	Parameter GT_STATE_REG bound to: 16'b1000000101001110 
+	Parameter GT_TP1_REG bound to: 16'b1000000101010000 
+	Parameter st_idle bound to: 7'b0000001 
+	Parameter st_init bound to: 7'b0000010 
+	Parameter st_get_id bound to: 7'b0000100 
+	Parameter st_cfg_reg bound to: 7'b0001000 
+	Parameter st_check_touch bound to: 7'b0010000 
+	Parameter st_get_coord bound to: 7'b0100000 
+	Parameter st_coord_handle bound to: 7'b1000000 
+INFO: [Synth 8-6155] done synthesizing module 'touch_dri' (2#1) [D:/study/FPGA/study_project/shop/rtl/touch/touch_dri.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'touch_top' (3#1) [D:/study/FPGA/study_project/shop/rtl/touch/touch_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'state_control' [D:/study/FPGA/study_project/shop/rtl/state_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'area_judge' [D:/study/FPGA/study_project/shop/rtl/area_judge.v:1]
+	Parameter HALF_YUAN bound to: 13 - type: integer 
+	Parameter ONE_YUAN bound to: 14 - type: integer 
+	Parameter FIVE_YUAN bound to: 15 - type: integer 
+	Parameter WITHDRAW bound to: 16 - type: integer 
+	Parameter CONFIRM bound to: 17 - type: integer 
+	Parameter CANCEL bound to: 18 - type: integer 
+	Parameter OPTION_X bound to: 605 - type: integer 
+	Parameter OPTION_Y bound to: 70 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'area_judge' (4#1) [D:/study/FPGA/study_project/shop/rtl/area_judge.v:1]
+INFO: [Synth 8-6157] synthesizing module 'goods_choose' [D:/study/FPGA/study_project/shop/rtl/goods_choose.v:1]
+	Parameter IDLE bound to: 2'b00 
+	Parameter INIT bound to: 2'b01 
+	Parameter WAITING bound to: 2'b10 
+	Parameter FINISH bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [D:/study/FPGA/study_project/shop/rtl/goods_choose.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'goods_choose' (5#1) [D:/study/FPGA/study_project/shop/rtl/goods_choose.v:1]
+INFO: [Synth 8-6157] synthesizing module 'trade' [D:/study/FPGA/study_project/shop/rtl/trade.v:1]
+	Parameter IDLE bound to: 3'b000 
+	Parameter ADDING bound to: 3'b001 
+	Parameter WAITING bound to: 3'b010 
+	Parameter CACULATE bound to: 3'b011 
+	Parameter CLEAR bound to: 3'b100 
+	Parameter INIT bound to: 3'b101 
+	Parameter CANCEL bound to: 3'b110 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/study/FPGA/study_project/shop/rtl/trade.v:119]
+INFO: [Synth 8-6155] done synthesizing module 'trade' (6#1) [D:/study/FPGA/study_project/shop/rtl/trade.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'state_control' (7#1) [D:/study/FPGA/study_project/shop/rtl/state_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'show_top' [D:/study/FPGA/study_project/shop/rtl/show/show_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rd_id' [D:/study/FPGA/study_project/shop/rtl/show/rd_id.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rd_id' (8#1) [D:/study/FPGA/study_project/shop/rtl/show/rd_id.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [D:/study/FPGA/study_project/shop/rtl/show/clk_div.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div' (9#1) [D:/study/FPGA/study_project/shop/rtl/show/clk_div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lcd_display' [D:/study/FPGA/study_project/shop/rtl/show/lcd_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'get_pix_area' [D:/study/FPGA/study_project/shop/rtl/show/get_pix_area.v:1]
+	Parameter PIC_X_START bound to: 11'b00000001010 
+	Parameter PIC_Y_START bound to: 11'b00000001010 
+	Parameter PIC0_X_START bound to: 11'b00000001010 
+	Parameter PIC0_Y_START bound to: 11'b00000001010 
+	Parameter PIC1_X_START bound to: 11'b00010100000 
+	Parameter PIC1_Y_START bound to: 11'b00000001010 
+	Parameter PIC2_X_START bound to: 11'b00100110110 
+	Parameter PIC2_Y_START bound to: 11'b00000001010 
+	Parameter PIC3_X_START bound to: 11'b00111001100 
+	Parameter PIC3_Y_START bound to: 11'b00000001010 
+	Parameter PIC4_X_START bound to: 11'b00000001010 
+	Parameter PIC4_Y_START bound to: 11'b00010110100 
+	Parameter PIC5_X_START bound to: 11'b00010100000 
+	Parameter PIC5_Y_START bound to: 11'b00010110100 
+	Parameter PIC6_X_START bound to: 11'b00100110110 
+	Parameter PIC6_Y_START bound to: 11'b00010110100 
+	Parameter PIC7_X_START bound to: 11'b00111001100 
+	Parameter PIC7_Y_START bound to: 11'b00010110100 
+	Parameter PIC8_X_START bound to: 11'b00000001010 
+	Parameter PIC8_Y_START bound to: 11'b00101011110 
+	Parameter PIC9_X_START bound to: 11'b00010100000 
+	Parameter PIC9_Y_START bound to: 11'b00101011110 
+	Parameter PIC10_X_START bound to: 11'b00100110110 
+	Parameter PIC10_Y_START bound to: 11'b00101011110 
+	Parameter PIC11_X_START bound to: 11'b00111001100 
+	Parameter PIC11_Y_START bound to: 11'b00101011110 
+	Parameter PRC0_X_START bound to: 11'b00001101110 
+	Parameter PRC0_Y_START bound to: 11'b00000101000 
+	Parameter PRC1_X_START bound to: 11'b00100000100 
+	Parameter PRC1_Y_START bound to: 11'b00000101000 
+	Parameter PRC2_X_START bound to: 11'b00110011010 
+	Parameter PRC2_Y_START bound to: 11'b00000101000 
+	Parameter PRC3_X_START bound to: 11'b01000110000 
+	Parameter PRC3_Y_START bound to: 11'b00000101000 
+	Parameter PRC4_X_START bound to: 11'b00001101110 
+	Parameter PRC4_Y_START bound to: 11'b00011010010 
+	Parameter PRC5_X_START bound to: 11'b00100000100 
+	Parameter PRC5_Y_START bound to: 11'b00011010010 
+	Parameter PRC6_X_START bound to: 11'b00110011010 
+	Parameter PRC6_Y_START bound to: 11'b00011010010 
+	Parameter PRC7_X_START bound to: 11'b01000110000 
+	Parameter PRC7_Y_START bound to: 11'b00011010010 
+	Parameter PRC8_X_START bound to: 11'b00001101110 
+	Parameter PRC8_Y_START bound to: 11'b00101111100 
+	Parameter PRC9_X_START bound to: 11'b00100000100 
+	Parameter PRC9_Y_START bound to: 11'b00101111100 
+	Parameter PRC10_X_START bound to: 11'b00110011010 
+	Parameter PRC10_Y_START bound to: 11'b00101111100 
+	Parameter PRC11_X_START bound to: 11'b01000110000 
+	Parameter PRC11_Y_START bound to: 11'b00101111100 
+	Parameter OPT_X_START bound to: 11'b01001011101 
+	Parameter OPT_Y_START bound to: 11'b00001000110 
+	Parameter CHAR1_X_START bound to: 11'b01010011010 
+	Parameter CHAR1_Y_START bound to: 11'b00110000101 
+	Parameter CHAR2_X_START bound to: 11'b01010101111 
+	Parameter CHAR2_Y_START bound to: 11'b00110000101 
+	Parameter POINT_X_START bound to: 11'b01011000001 
+	Parameter POINT_Y_START bound to: 11'b00110100000 
+	Parameter CHAR3_X_START bound to: 11'b01011000110 
+	Parameter CHAR3_Y_START bound to: 11'b00110000101 
+	Parameter MONEY_X_START bound to: 11'b01001100010 
+	Parameter MONEY_Y_START bound to: 11'b00001000110 
+	Parameter HALF_YUAN_X_START bound to: 11'b01001100001 
+	Parameter HALF_YUAN_Y_START bound to: 11'b00001000101 
+	Parameter ONE_YUAN_X_START bound to: 11'b01010011101 
+	Parameter ONE_YUAN_Y_START bound to: 11'b00001000101 
+	Parameter FIVE_YUAN_X_START bound to: 11'b01011011001 
+	Parameter FIVE_YUAN_Y_START bound to: 11'b00001000101 
+	Parameter MONEY_WIDTH bound to: 11'b00000110100 
+	Parameter MONEY_HEIGHT bound to: 11'b00001000011 
+	Parameter POINT_R bound to: 11'b00000000010 
+	Parameter CHAR_WIDTH bound to: 11'b00000010000 
+	Parameter CHAR_HEIGHT bound to: 11'b00000100000 
+	Parameter PIC_WIDTH bound to: 11'b00101101000 
+	Parameter PIC_HEIGHT bound to: 11'b00100111110 
+	Parameter GOODS_WIDTH bound to: 11'b00001011010 
+	Parameter GOODS_HEIGHT bound to: 11'b00001101010 
+	Parameter BLOCK_WIDTH bound to: 11'b00010001100 
+	Parameter BLOCK_HEIGHT bound to: 11'b00010000010 
+	Parameter PRICE_WIDTH bound to: 11'b00000011001 
+	Parameter PRICE_HEIGHT bound to: 11'b00000010111 
+	Parameter OPTION_WIDTH bound to: 11'b00010001100 
+	Parameter OPTION_HEIGHT bound to: 11'b00101101110 
+INFO: [Synth 8-6155] done synthesizing module 'get_pix_area' (10#1) [D:/study/FPGA/study_project/shop/rtl/show/get_pix_area.v:1]
+INFO: [Synth 8-6157] synthesizing module 'get_pix_data' [D:/study/FPGA/study_project/shop/rtl/show/get_pix_data.v:1]
+	Parameter BACK_COLOR bound to: 24'b111110111110010111010110 
+	Parameter WHITE bound to: 24'b111111111111111111111111 
+	Parameter RED bound to: 24'b111111110111110010000000 
+	Parameter BLACK bound to: 24'b000000000000000000000000 
+	Parameter CHARBACK bound to: 24'b111111111111001011001100 
+	Parameter CHAR1_X_START bound to: 11'b01010011010 
+	Parameter CHAR1_Y_START bound to: 11'b00110000101 
+	Parameter CHAR2_X_START bound to: 11'b01010101111 
+	Parameter CHAR2_Y_START bound to: 11'b00110000101 
+	Parameter POINT_X_START bound to: 11'b01011000001 
+	Parameter POINT_Y_START bound to: 11'b00110100000 
+	Parameter CHAR3_X_START bound to: 11'b01011000110 
+	Parameter CHAR3_Y_START bound to: 11'b00110000101 
+	Parameter POINT_R bound to: 11'b00000000010 
+	Parameter CHAR_WIDTH bound to: 11'b00000010000 
+	Parameter CHAR_HEIGHT bound to: 11'b00000100000 
+	Parameter OPTION_WIDTH bound to: 11'b00010001100 
+	Parameter PRC11_Y_START bound to: 11'b00101111100 
+	Parameter PIC11_Y_START bound to: 11'b00101011110 
+	Parameter OPT_Y_START bound to: 11'b00001000110 
+	Parameter OPT_X_START bound to: 11'b01001011101 
+	Parameter PIC_HEIGHT bound to: 11'b00100111110 
+	Parameter PRICE_HEIGHT bound to: 11'b00000010111 
+	Parameter OPTION_HEIGHT bound to: 11'b00101101110 
+	Parameter GOODS_HEIGHT bound to: 11'b00001101010 
+	Parameter MONEY_WIDTH bound to: 11'b00000110100 
+	Parameter MONEY_HEIGHT bound to: 11'b00001000011 
+	Parameter MONEY_X_START bound to: 11'b01001100010 
+	Parameter MONEY_Y_START bound to: 11'b00001000110 
+INFO: [Synth 8-6157] synthesizing module 'tran16t10' [D:/study/FPGA/study_project/shop/rtl/show/tran16t10.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tran16t10' (11#1) [D:/study/FPGA/study_project/shop/rtl/show/tran16t10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/.Xil/Vivado-17364-Sherlock/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (12#1) [D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/.Xil/Vivado-17364-Sherlock/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/.Xil/Vivado-17364-Sherlock/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (13#1) [D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/.Xil/Vivado-17364-Sherlock/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/.Xil/Vivado-17364-Sherlock/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (14#1) [D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/.Xil/Vivado-17364-Sherlock/realtime/blk_mem_gen_2_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (16) of module 'blk_mem_gen_2' [D:/study/FPGA/study_project/shop/rtl/show/get_pix_data.v:239]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/.Xil/Vivado-17364-Sherlock/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (15#1) [D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/.Xil/Vivado-17364-Sherlock/realtime/blk_mem_gen_3_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_3' [D:/study/FPGA/study_project/shop/rtl/show/get_pix_data.v:246]
+INFO: [Synth 8-6155] done synthesizing module 'get_pix_data' (16#1) [D:/study/FPGA/study_project/shop/rtl/show/get_pix_data.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'lcd_display' (17#1) [D:/study/FPGA/study_project/shop/rtl/show/lcd_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lcd_driver' [D:/study/FPGA/study_project/shop/rtl/show/lcd_driver.v:1]
+	Parameter H_SYNC_4342 bound to: 11'b00000101001 
+	Parameter H_BACK_4342 bound to: 11'b00000000010 
+	Parameter H_DISP_4342 bound to: 11'b00111100000 
+	Parameter H_FRONT_4342 bound to: 11'b00000000010 
+	Parameter H_TOTAL_4342 bound to: 11'b01000001101 
+	Parameter V_SYNC_4342 bound to: 11'b00000001010 
+	Parameter V_BACK_4342 bound to: 11'b00000000010 
+	Parameter V_DISP_4342 bound to: 11'b00100010000 
+	Parameter V_FRONT_4342 bound to: 11'b00000000010 
+	Parameter V_TOTAL_4342 bound to: 11'b00100011110 
+	Parameter H_SYNC_7084 bound to: 11'b00010000000 
+	Parameter H_BACK_7084 bound to: 11'b00001011000 
+	Parameter H_DISP_7084 bound to: 11'b01100100000 
+	Parameter H_FRONT_7084 bound to: 11'b00000101000 
+	Parameter H_TOTAL_7084 bound to: 11'b10000100000 
+	Parameter V_SYNC_7084 bound to: 11'b00000000010 
+	Parameter V_BACK_7084 bound to: 11'b00000100001 
+	Parameter V_DISP_7084 bound to: 11'b00111100000 
+	Parameter V_FRONT_7084 bound to: 11'b00000001010 
+	Parameter V_TOTAL_7084 bound to: 11'b01000001101 
+	Parameter H_SYNC_7016 bound to: 11'b00000010100 
+	Parameter H_BACK_7016 bound to: 11'b00010001100 
+	Parameter H_DISP_7016 bound to: 11'b10000000000 
+	Parameter H_FRONT_7016 bound to: 11'b00010100000 
+	Parameter H_TOTAL_7016 bound to: 11'b10101000000 
+	Parameter V_SYNC_7016 bound to: 11'b00000000011 
+	Parameter V_BACK_7016 bound to: 11'b00000010100 
+	Parameter V_DISP_7016 bound to: 11'b01001011000 
+	Parameter V_FRONT_7016 bound to: 11'b00000001100 
+	Parameter V_TOTAL_7016 bound to: 11'b01001111011 
+	Parameter H_SYNC_1018 bound to: 11'b00000001010 
+	Parameter H_BACK_1018 bound to: 11'b00001010000 
+	Parameter H_DISP_1018 bound to: 11'b10100000000 
+	Parameter H_FRONT_1018 bound to: 11'b00001000110 
+	Parameter H_TOTAL_1018 bound to: 11'b10110100000 
+	Parameter V_SYNC_1018 bound to: 11'b00000000011 
+	Parameter V_BACK_1018 bound to: 11'b00000001010 
+	Parameter V_DISP_1018 bound to: 11'b01100100000 
+	Parameter V_FRONT_1018 bound to: 11'b00000001010 
+	Parameter V_TOTAL_1018 bound to: 11'b01100110111 
+	Parameter H_SYNC_4384 bound to: 11'b00010000000 
+	Parameter H_BACK_4384 bound to: 11'b00001011000 
+	Parameter H_DISP_4384 bound to: 11'b01100100000 
+	Parameter H_FRONT_4384 bound to: 11'b00000101000 
+	Parameter H_TOTAL_4384 bound to: 11'b10000100000 
+	Parameter V_SYNC_4384 bound to: 11'b00000000010 
+	Parameter V_BACK_4384 bound to: 11'b00000100001 
+	Parameter V_DISP_4384 bound to: 11'b00111100000 
+	Parameter V_FRONT_4384 bound to: 11'b00000001010 
+	Parameter V_TOTAL_4384 bound to: 11'b01000001101 
+INFO: [Synth 8-6155] done synthesizing module 'lcd_driver' (18#1) [D:/study/FPGA/study_project/shop/rtl/show/lcd_driver.v:1]
+WARNING: [Synth 8-7071] port 'data_req' of module 'lcd_driver' is unconnected for instance 'u_lcd_driver' [D:/study/FPGA/study_project/shop/rtl/show/show_top.v:68]
+WARNING: [Synth 8-7023] instance 'u_lcd_driver' of module 'lcd_driver' has 16 connections declared, but only 15 given [D:/study/FPGA/study_project/shop/rtl/show/show_top.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'show_top' (19#1) [D:/study/FPGA/study_project/shop/rtl/show/show_top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shop_top' (20#1) [D:/study/FPGA/study_project/shop/rtl/shop_top.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1241.266 ; gain = 99.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1241.266 ; gain = 99.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1241.266 ; gain = 99.113
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1241.266 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/study/FPGA/study_project/shop/prj/shop/shop.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0'
+Finished Parsing XDC File [d:/study/FPGA/study_project/shop/prj/shop/shop.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0'
+Parsing XDC File [d:/study/FPGA/study_project/shop/prj/shop/shop.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1'
+Finished Parsing XDC File [d:/study/FPGA/study_project/shop/prj/shop/shop.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1'
+Parsing XDC File [d:/study/FPGA/study_project/shop/prj/shop/shop.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2'
+Finished Parsing XDC File [d:/study/FPGA/study_project/shop/prj/shop/shop.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2'
+Parsing XDC File [d:/study/FPGA/study_project/shop/prj/shop/shop.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_3'
+Finished Parsing XDC File [d:/study/FPGA/study_project/shop/prj/shop/shop.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_3'
+Parsing XDC File [D:/study/FPGA/study_project/shop/prj/shop/shop.srcs/constrs_1/new/shop.xdc]
+Finished Parsing XDC File [D:/study/FPGA/study_project/shop/prj/shop/shop.srcs/constrs_1/new/shop.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/study/FPGA/study_project/shop/prj/shop/shop.srcs/constrs_1/new/shop.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/shop_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/shop_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1373.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1373.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1373.391 ; gain = 231.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1373.391 ; gain = 231.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_show_top/u_lcd_display/u_get_pix_data/blk_mem_gen_3. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1373.391 ; gain = 231.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'i2c_dri'
+INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'touch_dri'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'goods_choose'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'trade'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                 st_idle |                         00000001 |                         00000001
+               st_sladdr |                         00000010 |                         00000010
+               st_addr16 |                         00000100 |                         00000100
+                st_addr8 |                         00001000 |                         00001000
+              st_data_wr |                         00010000 |                         00010000
+              st_addr_rd |                         00100000 |                         00100000
+              st_data_rd |                         01000000 |                         01000000
+                 st_stop |                         10000000 |                         10000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cur_state_reg' in module 'i2c_dri'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                 st_idle |                          0000001 |                          0000001
+                 st_init |                          0000010 |                          0000010
+               st_get_id |                          0000100 |                          0000100
+              st_cfg_reg |                          0001000 |                          0001000
+          st_check_touch |                          0010000 |                          0010000
+            st_get_coord |                          0100000 |                          0100000
+         st_coord_handle |                          1000000 |                          1000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cur_state_reg' in module 'touch_dri'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                    INIT |                               01 |                               01
+                 WAITING |                               10 |                               10
+                  FINISH |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'goods_choose'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                          0000001 |                              000
+                    INIT |                          0000010 |                              101
+                  ADDING |                          0000100 |                              001
+                  CANCEL |                          0001000 |                              110
+                 WAITING |                          0010000 |                              010
+                CACULATE |                          0100000 |                              011
+                   CLEAR |                          1000000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'trade'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1373.391 ; gain = 231.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   4 Input   12 Bit       Adders := 1     
+	   3 Input   11 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 5     
+	   4 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 5     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 8     
+	   2 Input    4 Bit       Adders := 7     
+	   2 Input    1 Bit       Adders := 1     
++---Registers : 
+	              512 Bit    Registers := 8     
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 10    
+	               11 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 26    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 13    
+	   4 Input   24 Bit        Muxes := 2     
+	   3 Input   24 Bit        Muxes := 2     
+	   7 Input   16 Bit        Muxes := 7     
+	   2 Input   16 Bit        Muxes := 9     
+	   8 Input   16 Bit        Muxes := 1     
+	   6 Input   16 Bit        Muxes := 2     
+	   6 Input   15 Bit        Muxes := 1     
+	   4 Input   11 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 6     
+	   4 Input   10 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 2     
+	  22 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 22    
+	   9 Input    8 Bit        Muxes := 2     
+	   8 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 2     
+	   3 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
+	  31 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 16    
+	  29 Input    7 Bit        Muxes := 1     
+	  33 Input    7 Bit        Muxes := 1     
+	  22 Input    7 Bit        Muxes := 1     
+	   6 Input    7 Bit        Muxes := 3     
+	   9 Input    7 Bit        Muxes := 1     
+	   8 Input    7 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 2     
+	   3 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 5     
+	  48 Input    6 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	  19 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 5     
+	   7 Input    4 Bit        Muxes := 3     
+	   6 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 2     
+	  11 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 8     
+	   3 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	  13 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 6     
+	   5 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   9 Input    2 Bit        Muxes := 1     
+	   8 Input    2 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 71    
+	  29 Input    1 Bit        Muxes := 9     
+	  22 Input    1 Bit        Muxes := 6     
+	  31 Input    1 Bit        Muxes := 8     
+	  33 Input    1 Bit        Muxes := 4     
+	   6 Input    1 Bit        Muxes := 11    
+	   9 Input    1 Bit        Muxes := 15    
+	   7 Input    1 Bit        Muxes := 33    
+	   8 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 2     
+	  13 Input    1 Bit        Muxes := 1     
+	  18 Input    1 Bit        Muxes := 1     
+	 512 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1373.391 ; gain = 231.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+-------------------+---------------+----------------+
+|Module Name | RTL Object        | Depth x Width | Implemented As | 
++------------+-------------------+---------------+----------------+
+|i2c_dri     | sda_out           | 64x1          | LUT            | 
+|i2c_dri     | scl               | 64x1          | LUT            | 
+|i2c_dri     | scl               | 64x1          | LUT            | 
+|touch_top   | u_i2c_dri/sda_out | 64x1          | LUT            | 
+|touch_top   | u_i2c_dri/scl     | 64x1          | LUT            | 
+|touch_top   | u_i2c_dri/scl     | 64x1          | LUT            | 
++------------+-------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1373.391 ; gain = 231.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 1389.242 ; gain = 247.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1393.941 ; gain = 251.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1408.750 ; gain = 266.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1408.750 ; gain = 266.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1408.750 ; gain = 266.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1408.750 ; gain = 266.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1408.750 ; gain = 266.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1408.750 ; gain = 266.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         1|
+|2     |blk_mem_gen_1 |         1|
+|3     |blk_mem_gen_2 |         1|
+|4     |blk_mem_gen_3 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |blk_mem_gen |     4|
+|5     |BUFG        |     3|
+|6     |CARRY4      |    53|
+|7     |LUT1        |    25|
+|8     |LUT2        |   252|
+|9     |LUT3        |   151|
+|10    |LUT4        |   129|
+|11    |LUT5        |   188|
+|12    |LUT6        |   668|
+|13    |MUXF7       |    93|
+|14    |MUXF8       |    26|
+|15    |FDCE        |   397|
+|16    |FDPE        |    25|
+|17    |IBUF        |     2|
+|18    |IOBUF       |     4|
+|19    |OBUF        |     8|
+|20    |OBUFT       |    22|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1408.750 ; gain = 266.598
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1408.750 ; gain = 134.473
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1408.750 ; gain = 266.598
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1420.820 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 176 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1420.820 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 1420.820 ; gain = 278.668
+INFO: [Common 17-1381] The checkpoint 'D:/study/FPGA/study_project/shop/prj/shop/shop.runs/synth_1/shop_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file shop_top_utilization_synth.rpt -pb shop_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 12 13:18:19 2023...
